@@ -40,7 +40,9 @@
     <link href="CSS/signin.css" rel="stylesheet" />
     <link href="CSS/modal.css" rel="stylesheet" />
 
+    <script src="js/signin.js"></script>
   </head>
+
   <body class="text-center">
     <main class="form-signin">
       <form>
@@ -49,7 +51,7 @@
 
         <div class="form-floating">
           <input type="email" class="form-control" id="usernameField" placeholder="name@example.com"/>
-          <label for="floatingInput">Email address</label>
+          <label for="floatingInput">User name</label>
         </div>
         <div class="form-floating">
           <input type="password" class="form-control" id="passwordField" placeholder="Password"/>
@@ -61,7 +63,7 @@
             <input type="checkbox" value="remember-me" /> Remember me
           </label>
         </div>
-        <a href="index.html" class="w-100 btn btn-lg btn-primary">Log In</a>
+        <button onclick="valEmail()" class="w-100 btn btn-lg btn-primary">Log In</a>
         <p class="mt-5 mb-3">Dont have an account?</p>
         <a href="#" class="mt-1 mb-3 text-muted"  data-bs-toggle="modal" data-bs-target="#profileModal">Register</a>
       </form>
