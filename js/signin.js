@@ -9,14 +9,15 @@ function valEmail(){
     var email= document.querySelector('#usernameField').value ;
     var pwd=document.querySelector('#passwordField').value;
 
-    if (email== "" || pwd=="" ){
-        window.alert("Please enter a valid email address or password ");
-    }else{ 
+    if (email== "" || pwd=="" ) {
+        window.alert("Please complete the sign-in fields with a valid user name or password ");
+    }else if(email=="shams" || email=="Laden" || email=="john"){ 
         validateAccount(email,pwd);
+    }else{
+        window.alert("The user name is not in our database. Not a member, click Register to sign up!");
     }
-   
-
 }
+
 function validateAccount(email,password){
 
     console.log("here")
@@ -30,19 +31,23 @@ function validateAccount(email,password){
             if (email === users[index][0]){
                 valEmail= true;
                 storIndex= index;
-    
+
+               
+            
                 if(password === users[index][1]){
                     window.location.replace("index.html");
+                }else{
+                    //window.alert("The user name is not in our database. Please Register to sign in");
+                    window.alert("The  password you've entered is incorrect")
                 }
-            }else{
-                window.alert("The user name is not in our database. Please Register to sign in");
+
+                
             }
         }
-        
-        
-    
-    
+
+
     
 
 
 }
+
